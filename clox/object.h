@@ -17,6 +17,7 @@ typedef enum {
 
 struct Obj {
     ObjType type;
+    struct Obj* next;
 };
 
 struct ObjString {
@@ -26,6 +27,7 @@ struct ObjString {
     uint32_t hash;
 };
 
+ObjString* takeString(char* chars, int length);
 ObjString* copyString(const char* chars, int length);
 void printObject(Value value);
 
