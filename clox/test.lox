@@ -1,1 +1,2 @@
-"str" == "str"
+var str = "jonathan";
+print str; 
